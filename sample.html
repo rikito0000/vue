@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <p v-once>{{ message }}</p>
+    <p>{{ number * 3}}</p>
+    <p>{{ ok ? 'yes' : 'no'}}</p>
+    <p>{{ sayHi() }}</p>
+    <p v-text="message"></p>
+    <p>{{ html }}</p>
+    <p v-html="html"></p>
+    <a :href="url">goggle</a>
+  </div>
+
+  <script src="https://unpkg.com/vue@2.6.10"></script>
+  <script src="https://unpkg.com/vue-router@3.0.6"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello',
+        number: 3,
+        ok: false,
+        html: '<h1>desu</h1>',
+        url: 'https://google.com'
+      },
+      methods: {
+        sayHi: function () {
+          this.message = 'hello vue'
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
