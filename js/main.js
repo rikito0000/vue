@@ -1,33 +1,69 @@
+function helloConsole () {
+  console.log('こんにちは');
+}
 
-let name = '太郎';
-console.log(name);
-name = 'tanaka';
-console.log(name);
+helloConsole();
+helloConsole();
+helloConsole();
 
-const private = '田中太郎';
-console.log(private);
-full = 'tanaka';
-console.log(full);
+function hello (name) {
+  console.log(`hello,${name}`);
+}
 
-console.log('more\'jitu');
-console.log("123\n456");
-console.log('moji' + 'retu');
+hello('太郎');
 
-const names = 'taro';
+function greeting() {
+  const hour = new Date().getHours();
+  if(hour <= 11) {
+    return 'おはようございます。';
+  }
 
-const hello = 'hello' + 'Mr' +  names;
-console.log(hello);
-console.log(hello);
-console.log(hello);
+  return 'こんにちは。';
+}
 
-// テンプレート文字列に対して
-
-const numbers = `123
-455
-555`;
-console.log(numbers);
-
-const hi = `こんにちは${names}さん`;
-console.log(hi);
+const aisatu = greeting();
 
 
+function findSquareArea(length) {
+  const area = length * length;
+  return area;
+}
+
+// const result = findSquareArea(100);
+// console.log(result);
+
+function findTriangleArea (x, y) {
+  const result = x * y / 2
+  return result
+}
+
+const result = findTriangleArea(10, 5);
+console.log(result);
+
+
+const add = function(x, y) {
+  const sum = x + y;
+  return sum;
+}
+
+const results = add(1,6);
+console.log(results);
+
+const tasizann = (x, y) => {
+  const sum = x + y;
+  return sum;
+}
+
+const kekka = tasizann(8,9);
+console.log(kekka);
+
+const findTriangleAreas = function(w, t) {
+  return w * t / 2;
+}
+
+console.log(findTriangleAreas(1,4));
+
+
+const findTriangle = (a, b) => a * b / 2;
+
+console.log(findTriangle(1,4));
