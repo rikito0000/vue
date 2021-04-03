@@ -1,0 +1,13 @@
+#app ul {
+  list-style: none;
+}
+
+#app li > span.done {
+  text-decoration: line-through;
+}
+
+
+body {
+  background-color: #0E1822;
+  color: #fff;
+}
