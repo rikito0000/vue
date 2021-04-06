@@ -25,14 +25,36 @@
       </li>
     </ul>
   </div>
-
   <div id="sub">
     <h2>TODO list</h2>
-    <input type="text">
+    <input type="text" v-model="newItem">
     <button v-on:click="addTask">add</button>
     <p>
-      {{ $data }}
+
     </p>
+    <ul>
+      <li v-for="(task, index) in tasks">
+        <input type="checkbox" v-model="task.isDone">
+        <span v-bind:class="{ done: task.isDone }">{{ task.item }}</span>
+        <button v-on:click="onclick(index)">delete</button>
+      </li>
+    </ul>
+  </div>
+
+  <div id="test">
+    <h2>TODO List</h2>
+    <input type="text" v-model="newTask">
+    <button v-on:click="addTask">add</button>
+    <p> {{ $data }}</p>
+
+
+    <ul>
+      <li v-for="(tasklist, index) in taskLists ">
+        <input type="checkbox" v-model="tasklist.isDone">
+        <span v-bind:class="{ done: tasklist.isDone }">{{ tasklist.item }}</span>
+        <button v-on:click="deleteTask(index)">delete</button>
+      </li>
+    </ul>
   </div>
   <script src="sub.js"></script>
 </body>

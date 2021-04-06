@@ -1,8 +1,8 @@
-#app ul {
+#test ul {
   list-style: none;
 }
 
-#app li > span.done {
+#test li > span.done {
   text-decoration: line-through;
 }
 

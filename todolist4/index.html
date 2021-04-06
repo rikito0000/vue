@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h2>テスト</h2>
+    <input type="text" v-model="newTask">
+    <button v-on:click="addTask">add</button>
+    <p>{{ $data }}</p>
+    <ul>
+      <li v-for="(task, index) in tasks">
+        <input type="checkbox" v-model="task.isDone">
+        <span v-bind:class="{ done: task.isDone }">{{ task.item }}</span>
+        <button v-on:click="deleteTask(index)">delete</button>
+      </li>
+    </ul>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

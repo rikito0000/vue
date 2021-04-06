@@ -28,7 +28,3 @@ k
 });
 
 
-const sub = new Vue({
-
-});
-
